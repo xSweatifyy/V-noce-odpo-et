@@ -1,0 +1,129 @@
+body {
+    font-family: 'Trebuchet MS', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to bottom, #2d6a4f, #84a98c, #8eaf7e, #4b8f5c);
+    color: #1e3d59;
+    overflow: hidden;
+    text-align: center;
+}
+
+.countdown-container {
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #e63946;
+    margin-bottom: 10px;
+    font-family: 'Georgia', serif;
+}
+
+.time {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #1e3d59;
+}
+
+.description {
+    font-size: 1.1em;
+    color: #457b9d;
+    margin-top: 10px;
+}
+
+.decoration {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    font-size: 1.8em;
+    color: #e63946;
+}
+
+.footer-text {
+    font-size: 0.9em;
+    color: #6d6875;
+    margin-top: 15px;
+    font-style: italic;
+}
+
+/* Padající vločky */
+.snowflake {
+    position: absolute;
+    top: -5%;
+    font-size: 1.6em;
+    color: #ffffff;
+    opacity: 0.8;
+    animation: fall linear infinite;
+}
+
+/* Nastavení různých rychlostí a velikostí pro plynulý pohyb vloček */
+.snowflake:nth-child(odd) { 
+    font-size: 1.8em; 
+    animation-duration: 7s;
+}
+
+.snowflake:nth-child(even) { 
+    font-size: 1.4em; 
+    animation-duration: 6s;
+}
+
+.snowflake:nth-child(3n) {
+    font-size: 1.5em;
+    animation-duration: 5.5s;
+    animation-delay: 1s;
+}
+
+.snowflake:nth-child(4n) {
+    font-size: 1.3em;
+    animation-duration: 8s;
+    animation-delay: 0.5s;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-5%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(105vh);
+        opacity: 0.7;
+    }
+}
+.share-container {
+    margin-top: 20px;
+}
+
+.share-container button {
+    padding: 10px 20px;
+    background-color: #e63946;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.share-container button:hover {
+    background-color: #b52736;
+}
+
+#copy-alert {
+    color: #2d6a4f;
+    font-size: 0.9em;
+    margin-top: 10px;
+    font-style: italic;
+}
